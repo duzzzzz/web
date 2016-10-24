@@ -1,0 +1,67 @@
+<article class="setting" ng-controller="settingjs" >
+	<section class="setting_top">
+		<a href="javascript:window.history.go(-1);" class="iconfont icon-left flt"></a>
+		<p>设置</p>
+	</section>
+	<section class="setting_main">
+		<dl>
+			<dt>售后服务</dt>
+			<dd>
+				<p>联系客服</p>
+				<h4 class="frt">400-720-0770</h4></dd>
+		</dl>
+		<dl>
+			<dt>个人设置</dt>
+			<dd ng-click="clearimg()">
+				<p>清图片缓存</p><span class="iconfont icon-right"></span></dd>
+			<dd>
+				<p>个人信息</p><span class="iconfont icon-right"></span></dd>
+
+		</dl>
+		<dl>
+			<dt>关于APP</dt>
+			<dd>
+				<p>版本信息</p>
+				<h3 class="frt">4.0.0</h3></dd>
+			<dd>
+				<p>亲,给果园好评吧</p><span class="iconfont icon-right"></span></dd>
+			<dd ng-click="shareappc()">
+				<p>分享APP</p><span class="iconfont icon-right"></span></dd>
+		</dl>
+		<dl>
+			<dt>关于果园</dt>
+			<dd>
+				<p>关于我们</p><span class="iconfont icon-right"></span></dd>
+			<dd>
+				<p>48小时退换货</p><span class="iconfont icon-right"></span></dd>
+			<dd>
+				<p>常见问题</p><span class="iconfont icon-right"></span></dd>
+
+			<dd>
+				<p>配送说明</p><span class="iconfont icon-right"></span></dd>
+			<dd>
+				<p>企业合作</p><span class="iconfont icon-right"></span></dd>
+
+		</dl>
+	</section>
+	<!--清缓存图案-->
+	<!--加类 clearSave 的时候出现-->
+	<section class="clearimg">
+		<span class="iconfont icon-done"></span>
+		<p>已清除</p>
+	</section>
+	<!--分享到动画-->
+	<!--加shareShow出现,shareHidden消失-->
+	<section class="shareappi canNotSee" ng-click="shareappguan()">
+		<img src="img/toFriend.png" />
+		<img src="img/toQzone.png" />
+		<img src="img/toWeixin.png" />
+		<img src="img/toQQ.png" />
+		<img src="img/toWeibo.png" />
+	</section>
+
+	<!--底部-->
+	<section class="setting_bottom" ng-click="tuichudenglu()">
+		<p class="leaveLogin">退出登录</p>
+	</section>
+</article>

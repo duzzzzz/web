@@ -1,0 +1,39 @@
+<article class="login" ng-controller="loginjs" style="height: 100vh;">
+	<section class="login_top">
+		<a href="javascript:window.history.go(-1);" class="iconfont icon-left flt"></a>
+		<p>手机号快捷登录</p>
+	</section>
+	<section class="login_middle">
+		<div class="telInp clrfix">
+			<span class="iconfont icon-telNum flt"></span>
+			<div class="flt">
+				<input type="text"  placeholder="手机号" class="telkuang"/>
+			<p class="flt" ng-click="hqyzm()">获取验证码</p>
+			</div>
+		</div>
+	
+		<div class="passwordInp clrfix">
+			<span class="iconfont icon-key flt"></span>
+			<div class="flt">
+				<input type="text"  placeholder="短信验证码" class="pwkuang"/>
+			</div>
+		</div>
+		<h4>首次用手机号登录将自动为您注册,享新客专属折扣</h4>
+	
+		<a href="javascript:;" class="loginBtn" ng-click="login2()">登录</a>
+		<a href="javascript:;" class="codeError">未收到验证码?</a>
+	</section>
+	<section class="login_bottom active" ng-click="loginxianshiyinchang()">
+		<div>
+			<p class="flt"></p>
+			<h3 class="flt">合作账户登录</h3 ><p class="flt"></p>
+		</div>
+		<span class="iconfont icon-top"></span>
+		<ul class="clrfix">
+			<li class="iconfont icon-toQQ"></li>
+			<li class="iconfont icon-toWeixin"></li>
+			<li class="iconfont icon-toWeibo"></li>
+			<li class="iconfont icon-toAlipay"></li>
+		</ul>
+	</section>
+</article>

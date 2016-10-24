@@ -1,0 +1,381 @@
+<div ng-controller="homejs">
+	<a href="javascript:;" class="iconfont icon-toTop home_gotop" ng-click="goToTop()"></a>
+	<article class="home_main">
+		<!-----------------------------------搜索框和城市列表------------------------>
+		<div class="home_search clrfix">
+			<div class="home_address flt" ng-click="choosecity()">
+				<span class="home_city">{{cityad}}</span>
+				<span class="home_sj"></span>
+			</div>
+			<div class="home_sousuo flt">
+				<p id="searchBtn" class="iconfont icon-magnifier flt"></p>
+				<input type="text" class="so flt" placeholder="请输入搜索内容" />
+			</div>
+		</div>
+		<div class="city">
+			<div class="title">
+				<span class="fanhui" ng-click="fanhuizhuye()">返回</span><span class="citylist">城市列表</span>
+			</div>
+			<h4>当前位置</h4>
+			<p ng-click="choosecityok('湖北')">湖北</p>
+			<h4>省市列表</h4>
+			<p ng-repeat="i in citylist" ng-click="choosecityok(i)">{{i}}</p>
+		</div>
+		<!--------------------------轮播图---------------------------->
+		<article class="swiper-container banner">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="javascript:;">
+						<img src="img/banner01.jpg" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
+						<img src="img/banner02.jpg" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
+						<img src="img/banner03.jpg" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
+						<img src="img/banner04.jpg" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
+						<img src="img/banner05.jpg" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;">
+						<img src="img/banner06.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+
+		</article>
+		<!-------------------滚动资讯部分-------------------------------->
+		<div class="friendLink clrfix">
+			<div class="friendLinks">天天快报</div>
+			<div id="friendLinks_slide">
+				<ul style="margin: 0px; padding: 0px; list-style: none outside none;">
+					<li>
+						<a href="javascript:;">佳沛绿果巨无霸39.9元/6个 第二件9.9元</a>
+					</li>
+					<li>
+						<a href="javascript:;">小空间大“梨”想 分享免费得香梨</a>
+					</li>
+					<li>
+						<a href="javascript:;">泰国椰青49.9元/4个包邮送开椰器</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<!-------------------网站小功能部分---------------------------------------->
+		<div class="home_fun clrfix">
+			<ul>
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon1.png" />
+						<p>天天农场</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon2.png" />
+						<p>摇一摇</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon3.png" />
+						<p>天天签到</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon4.png" />
+						<p>积分兑换</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon5.png" />
+						<p>会员福利</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon6.png" />
+						<p>闪电送</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon7.png" />
+						<p>企业礼品</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="javascript:;">
+						<img src="img/home-icon8.jpg" />
+						<p>天天订菜</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-------------------主题图部分-------------------->
+		<div class="home_big clrfix">
+			<p class="home_top"><img src="img/toplist02.jpg" /></p>
+			<p class="home_bottom"><img src="img/toplist01.jpg" /></p>
+			<div class="home_putao flt">
+				<p class="bigwz">优品 不将就</p>
+				<span class="smallwz">一顿有仪式感的饭</span>
+				<img src="img/putao.png" />
+			</div>
+			<div class="home_shake frt">
+				<p class="bigwz">免费摇一摇</p>
+				<span class="smallwz">两个即食牛油果</span>
+				<img src="img/shake.png" />
+			</div>
+		</div>
+		<!------------------新品抢鲜部分--------------------------------->
+		<section class="home_new">
+			<div class="home_title">新品推荐<span class="iconfont icon-next"></span></div>
+			<div class="new_menu">
+				<ul class="new_list">
+					<li class="goods flt" ng-click="godetails(26)">
+						<img class="flt" src="img/yz01.jpg" />
+						<div class="product flt">
+							<p class="name">秘鲁葡萄柚</p>
+							<p class="derection">难以抵挡的VC诱惑</p>
+							<p class="price"><span class="home_num">￥49.9</span>/6个</p>
+						</div>
+					</li>
+					<li class="goods flt" ng-click="godetails(2)">
+						<img class="flt" src="img/yz02.jpg" />
+						<div class="product flt">
+							<p class="name">丽江雪桃</p>
+							<p class="derection">玉龙雪山 空运仙桃</p>
+							<p class="price"><span class="home_num">￥88</span>/3个</p>
+						</div>
+					</li>
+					<li class="goods flt" ng-click="godetails(25)">
+						<img class="flt" src="img/yz03.jpg" />
+						<div class="product flt">
+							<p class="name">新奇士澳洲红心橙</p>
+							<p class="derection">一颗红橙 一个能量补给站</p>
+							<p class="price"><span class="home_num">￥78</span>/6个</p>
+						</div>
+					</li>
+					<li class="goods flt">
+						<img class="flt" src="img/yz04.jpg" />
+						<div class="product flt">
+							<p class="name">韩国QQ弹葡萄</p>
+							<p class="derection">新款葡萄味好浓的QQ糖</p>
+							<p class="price"><span class="home_num">￥39</span>/1串</p>
+						</div>
+					</li>
+					<li class="goods flt">
+						<img class="flt" src="img/yz05.jpg" />
+						<div class="product flt">
+							<p class="name">台湾文旦</p>
+							<p class="derection">宝岛飘来的清新柚香</p>
+							<p class="price"><span class="home_num">￥59</span>/3个</p>
+						</div>
+					</li>
+					<li class="goods flt">
+						<img class="flt" src="img/yz06.jpg" />
+						<div class="product flt">
+							<p class="name">黑松露</p>
+							<p class="derection">菌界黑钻石</p>
+							<p class="price"><span class="home_num">￥398</span>/400g</p>
+						</div>
+						<div class="recommend frt">全部推荐
+							<p class="iconfont icon-circleRight"></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+
+		<!-----------------------------------主页列表部分------------------------------------------->
+		<section class="home_list">
+			<div class="list_title">精选专题</div>
+			<div class="list_img"><img src="img/list01.jpg" /></div>
+			<div class="list_menu clrfix">
+
+				<ul class="list_list ">
+
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit01.jpg" />
+							<p class="fruit_name">美国有籽红提</p>
+							<p class="fruit_price">￥58/2斤</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit02.jpg" />
+							<p class="fruit_name">云南蒙自石榴</p>
+							<p class="fruit_price">￥39.9/6+2个</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit03.jpg" />
+							<p class="fruit_name">佳沛新西兰绿奇异果(免费升级)</p>
+							<p class="fruit_price">￥49/12个</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit04.jpg" />
+							<p class="fruit_name">智力蓝贻贝</p>
+							<p class="fruit_price">￥19.27/500g</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit05.jpg" />
+							<p class="fruit_name">优选东海带鱼段</p>
+							<p class="fruit_price">￥29/400g</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit06.jpg" />
+							<p class="fruit_name">苏食童子鸡</p>
+							<p class="fruit_price">￥29/750g</p>
+
+						</a>
+					</li>
+					<div class="recommend flt">全部推荐
+						<p class="iconfont icon-circleRight"></p>
+					</div>
+				</ul>
+			</div>
+			<div class="list_img"><img src="img/list02.jpg" /></div>
+			<div class="list_menu clrfix">
+
+				<ul class="list_list ">
+
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit01.jpg" />
+							<p class="fruit_name">美国有籽红提</p>
+							<p class="fruit_price">￥58/2斤</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit02.jpg" />
+							<p class="fruit_name">云南蒙自石榴</p>
+							<p class="fruit_price">￥39.9/6+2个</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit03.jpg" />
+							<p class="fruit_name">佳沛新西兰绿奇异果(免费升级)</p>
+							<p class="fruit_price">￥49/12个</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit04.jpg" />
+							<p class="fruit_name">智力蓝贻贝</p>
+							<p class="fruit_price">￥19.27/500g</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit05.jpg" />
+							<p class="fruit_name">优选东海带鱼段</p>
+							<p class="fruit_price">￥29/400g</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit06.jpg" />
+							<p class="fruit_name">苏食童子鸡</p>
+							<p class="fruit_price">￥29/750g</p>
+
+						</a>
+					</li>
+					<div class="recommend flt">全部推荐
+						<p class="iconfont icon-circleRight"></p>
+					</div>
+				</ul>
+			</div>
+			<div class="list_img"><img src="img/list03.jpg" /></div>
+			<div class="list_menu clrfix">
+
+				<ul class="list_list ">
+
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit01.jpg" />
+							<p class="fruit_name">美国有籽红提</p>
+							<p class="fruit_price">￥58/2斤</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit02.jpg" />
+							<p class="fruit_name">云南蒙自石榴</p>
+							<p class="fruit_price">￥39.9/6+2个</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit03.jpg" />
+							<p class="fruit_name">佳沛新西兰绿奇异果(免费升级)</p>
+							<p class="fruit_price">￥49/12个</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit04.jpg" />
+							<p class="fruit_name">智力蓝贻贝</p>
+							<p class="fruit_price">￥19.27/500g</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit05.jpg" />
+							<p class="fruit_name">优选东海带鱼段</p>
+							<p class="fruit_price">￥29/400g</p>
+						</a>
+					</li>
+					<li class="flt">
+						<a href="javascript:;">
+							<img src="img/fruit06.jpg" />
+							<p class="fruit_name">苏食童子鸡</p>
+							<p class="fruit_price">￥29/750g</p>
+
+						</a>
+					</li>
+					<div class="recommend flt">全部推荐
+						<p class="iconfont icon-circleRight"></p>
+					</div>
+				</ul>
+			</div>
+		</section>
+	</article>
+
+</div>

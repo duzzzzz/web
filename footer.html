@@ -1,0 +1,29 @@
+<footer class="clrfix" ng-controller="footerjs">
+			<ul class="clrfix footerlist">
+				<li class="active homel" ng-click="golink('/home',0)">
+					<a href="javascript:;">
+						<span class="iconfont icon-home"></span>
+						<p>首页</p>
+					</a>
+				</li>
+				<li ng-click="golink('/list',1)">
+					<a href="javascript:;">
+						<span class="iconfont icon-list"></span>
+						<p>分类</p>
+					</a>
+				</li>
+				<li ng-click="golink('/car',2)">
+					<span class="carnum">{{allnum}}</span>
+					<a href="javascript:;">
+						<span class="iconfont icon-shopCar"></span>
+						<p>购物车</p>
+					</a>
+				</li>
+				<li ng-click="golink('/user',3)">
+					<a href="javascript:;">
+						<span class="iconfont icon-myFruit"></span>
+						<p>我的果园</p>
+					</a>
+				</li>
+			</ul>
+		</footer>

@@ -1,0 +1,18 @@
+<section class="clearfix list-lists" ng-controller="list-listsjs">
+	<ul class="biglist">
+		<li ng-repeat="i in listDate">
+			<ul class="clearfix smalllist">
+				<li class="list-apple clearfix" ng-repeat="j in i.all">
+					<dl class="list-pic"  ng-click="godetails(j.id)">
+						<img ng-src='{{j.imgurl}}' alt="" />
+					</dl>
+					<dt class="list-title">{{j.title}}</dt>
+					<dd class="list-price">¥{{j.price}}</dd>
+					<dd class="list-weight">{{j.num}}</dd>
+					<div class="list-add" ng-click="listsaddcar(j.id)"><span class="iconfont icon-plus"></span></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+</section>

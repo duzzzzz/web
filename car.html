@@ -1,0 +1,55 @@
+<div ng-controller="carjs">
+
+	<div class="shopcar_head clrfix">
+		<span class="shopcar_title flt">购物车</span>
+		<p class="write frt"></p>
+	</div>
+
+	<article class="shopcar_main" style="height: 100vh;">
+		<div class="noneBox" hidden>
+			<img src="img/shopcar.jpg" />
+			<p class="first">您的购物车还是空空的</p>
+			<p class="second">有种淡淡的忧伤...</p>
+			<span class="gohome"><a href="javascript:;" ng-click="gohome()">去首页逛逛</a></span>
+		</div>
+
+		<div class="shopcar_shopbox clrfix">
+			<div class="GoodsList" ng-repeat="i in cardataarr">
+				<ul class="shopcar_list">
+					<li class="flt clrfix">
+						<div class="circle flt">
+							<span class="iconfont icon-select select"></span>
+							<span class="iconfont icon-circle noselect"></span>
+						</div>
+						<div class="goodsImg flt">
+							<img ng-src="{{i['largeimg'][0]}}" />
+						</div>
+						<div class="goodsInfo flt ">
+							<h4>{{i.title}}</h4>
+							<div class="shop_price flt">
+								<p class="weight">{{i.num}}</p>
+								<p class="price">￥{{i.price|number:2}}</p>
+							</div>
+							<div class="numBox">
+								<a href="javascript:;" class="btn jian flt" ng-click="carjian(i.id)"><span class="iconfont icon-minus"></span></a>
+								<div class="shu flt">{{i.number}}</div>
+								<a href="javascript:;" class="btn jia flt" ng-click="caradd(i.id)"><span class="iconfont icon-plus"></span></a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="shop_count clrfix">
+				<div class="allselect flt">
+					<span class="iconfont icon-circle noselect"></span>
+					<span class="iconfont icon-select select"></span>
+					<p class="qx frt">全选</p>
+				</div>
+				<div class="js frt">结算<span class="js_num"></span></div>
+				<div class="heji flt">合计：<span class="jiage">￥{{hejijiage|number:2}}</span></div>
+			</div>
+		</div>
+	</article>
+
+</div>

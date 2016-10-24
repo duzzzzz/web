@@ -1,0 +1,41 @@
+<article class="myOrder" ng-controller="myOrder" style="height: 100vh;">
+	<section class="myOrder_top">
+		<a href="javascript:window.history.go(-1);" class="iconfont icon-left flt"></a>
+		<p>我的订单</p>
+	</section>
+	<ul class="myStatus">
+		<li><span class="active" ng-click="qiehuan(0)">全部</span></li>
+		<li><span ng-click="qiehuan(1)">待付款</span></li>
+		<li><span ng-click="qiehuan(2)">待发货</span></li>
+		<li><span ng-click="qiehuan(3)">待收货</span></li>
+		<li><span ng-click="qiehuan(4)">待评价</span></li>
+	</ul>
+
+	<ul class="showStatus clrfix">
+		<li class="active">
+			<img src="img/noOrder.jpg" />
+			<h2>您没有下过订单</h2>
+			<p>还等什么,赶紧下手买自己喜欢的水果吧</p>
+		</li>
+		<li>
+			<img src="img/noPay.jpg" />
+			<h2>您没有待付款的订单</h2>
+			<p>看来果子们已经筹集了果款</p>
+		</li>
+		<li>
+			<img src="img/noDeliver.jpg" />
+			<h2>您没有待发货的订单</h2>
+			<p>果子们正在努力锻炼成合格的果子等待出发</p>
+		</li>
+		<li>
+			<img src="img/noGet.jpg" />
+			<h2>您没有待收货的订单</h2>
+			<p>是不是急着要吃了?赶紧想想果子的吃法吧</p>
+		</li>
+		<li>
+			<img src="img/noValue.jpg" />
+			<h2>您没有待评价订单</h2>
+			<p>果子们休息去了...偷偷告诉你,评价有积分哦</p>
+		</li>
+	</ul>
+</article>

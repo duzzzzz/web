@@ -1,0 +1,214 @@
+<article class="detail" ng-controller="detailsjs">
+	<!--顶部-->
+	<section class="detail_top">
+		<a href="javascript:;" class="iconfont icon-left flt back" ng-click="fanhuishangyiye()"></a>
+		<div class="top_title">
+			<p class="active shangping" ng-click="shangping()">商品</p>
+			<p class="pingjia"  ng-click="pingjia()">评价</p>
+		</div>
+		<span href="javascript:;" class="iconfont icon-more frt moreBtn" ng-click="morelistshow()"></span>
+		<ul class="moreList" hidden>
+			<li><span class="iconfont icon-home"></span>
+				<a href="#/home">首页</a>
+			</li>
+			<li><span class="iconfont icon-magnifier"></span>
+				<a href="javascript:;">搜索</a>
+			</li>
+			<li><span class="iconfont icon-list"></span>
+				<a href="#/list">分类</a>
+			</li>
+
+		</ul>
+	</section>
+
+	<!--商品页-->
+	<section class="detail_goods">
+		<!--轮播-->
+		<section class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" ng-repeat="i in goodszhenid.largeimg">
+					<a href="javascript:;">
+						<img ng-src="{{i}}" />
+					</a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</section>
+
+		<section class="goodInfo">
+			<h3>{{goodszhenid.title}}</h3>
+			<span>¥{{goodszhenid.price}}</span>
+			<p>{{goodszhenid.num}}</p>
+		</section>
+		<!--详情图-->
+		<p class="detailImgTitle">商品详情</p>
+		<section class="detail_imgs">
+			<img ng-repeat="j in goodszhenid.detailsimg" ng-src="{{j}}" />
+		</section>
+
+	</section>
+
+	<!--评价页-->
+	<section class="detail_value" hidden>
+		<div class="valueInfo">
+			<div class="valueLevel flt"><span>97% 好评</span></div>
+			<div class="feel flt">
+				<p class="flt">口感</p>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+			</div>
+			<div class="feel flt">
+				<p class="flt">颜值</p>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+				<span class="iconfont icon-fiveStar"></span>
+			</div>
+		</div>
+
+		<!--评价/晒图-->
+		<div class="valandpic">
+			<div class="box">
+				<p class="vcount active" ng-click="vcount()">评价31750</p>
+				<p class="showpic" ng-click="showpic()">晒图5816</p>
+			</div>
+		</div>
+		<!--用户评价部分-->
+		<div class="userValBox">
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg1.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg2.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg3.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg2.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg1.jpg" alt="" class="valImg" />
+			</div>
+		</div>
+		<!--有图评价-->
+		<div class="imgValBox"  hidden>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">158****6678</span>
+					<p class="valTime frt">2016-7-15</p>
+				</div>
+				<h4 class="valContent">非常大 好吃</h4>
+				<img src="img/valImg2.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-20</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg1.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg3.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg2.jpg" alt="" class="valImg" />
+			</div>
+			<div class="userVal">
+				<div class="userInfos clrfix">
+
+					<img class="userImg flt" src="img/userImg.png" />
+					<span class="userTel flt">138****4578</span>
+					<p class="valTime frt">2016-6-15</p>
+				</div>
+				<h4 class="valContent">好吃 送货及时 下次继续购买</h4>
+				<img src="img/valImg1.jpg" alt="" class="valImg" />
+			</div>
+		</div>
+
+	</section>
+
+	<!--底部-->
+	<section class="detail_footer">
+		<div class="shopCarBtn" ng-click="gotocar()">
+			<span class="iconfont icon-shopCar" ></span>
+			<p class="goodNum"id="end">{{allnum}}</p>
+		</div>
+		<div class="collect flt">
+			<!--未收藏的图标是icon-like,已收藏的是icon-collectDone-->
+			<span class="iconfont icon-like zhegeshishoucang" ng-click="shoucanganniu()"></span>
+			<p>收藏</p>
+		</div>
+		<div class="share flt"  ng-click="shareappc()">
+			<span class="iconfont icon-share"></span>
+			<p>分享</p>
+		</div>
+		<div class="putInCar frt" ng-click="daddcar()" >加入购物车</div>
+	</section>
+	<!--加shareShow出现,shareHidden消失-->
+	<section class="shareappi canNotSee"  ng-click="shareappguan()">
+		<img src="img/toFriend.png" />
+		<img src="img/toQzone.png" />
+		<img src="img/toWeixin.png" />
+		<img src="img/toQQ.png" />
+		<img src="img/toWeibo.png" />
+	</section>
+</article>

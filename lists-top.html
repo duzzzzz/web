@@ -1,0 +1,15 @@
+<div  ng-controller="list-lists-topjs">
+	<header class="list_header" ng-click="listshowh()">
+		
+	<span class="iconfont icon-left prev" ng-click="prev()"></span>
+		<span class="list_lei">{{titltname}}<span class="iconfont icon-bottom"></span></span>
+
+	</header>
+	<div class="list-toplist trans" ng-click="listhide()">
+		<ul>
+		<li ng-repeat="k in listDate" ng-click="qiehuan(k.class)">
+			<span>{{k["title-chinese"]}}</span>
+		</li>
+	</ul>
+	</div>
+</div>

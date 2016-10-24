@@ -1,0 +1,10 @@
+<div class="list_main" ng-controller="listjs">
+	</header>
+	<ul class="list_shuiguo clearfix">
+		<li class="list-goods clearfix" ng-repeat="item in listDate" ng-click="golist(item.class)">
+			<h5 class="list_name">{{item["title-chinese"]}}</h5>
+			<p class="list_watery">{{item["title-english"]}}</p>
+			<img class="list_img" ng-src='{{item.img}}'>
+		</li>
+	</ul>
+</div>
